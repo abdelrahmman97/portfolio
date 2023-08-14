@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AM. | Web Developer </title>
+
+	<link rel="stylesheet" href="./assets/./css/./app.css">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+	<!-- <link rel="manifest" href="./assets/images/site.webmanifest"> -->
+
+	<!-- Animate CSS CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<!-- Splash Loading Script -->
+</head>
+
+<body>
+
+	<div class="splash animate__animated animate__fadeIn">
+		<div
+			class="inline-flex items-center px-4 py-2 text-sm font-semibold leading-6 transition duration-150 ease-in-out rounded-md animate__animated animate__fadeIn">
+			<svg class="w-5 h-5 mr-3 -ml-1 text-blue-600 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+				viewBox="0 0 24 24">
+				<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+				<path class="opacity-75" fill="currentColor"
+					d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+				</path>
+			</svg>
+			Loading
+		</div>
+	</div>
+
+	<div id="app" class="p-10 px-32 pb-0">
+
+		<!-- Navbar -->
+		<nav class="container">
+			<div class="block">
+				<div class="flex flex-row items-center justify-between gap-12">
+					<div>
+						<a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
+								class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a>
+					</div>
+					<ul class="flex flex-row gap-16 list-none">
+						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+								href="#about">about</a>
+						</li>
+						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+								href="#experience">Experience</a>
+						</li>
+						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+								href="#projects">projects</a>
+						</li>
+						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+								href="#contact">contact</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <a href="contact.html" type="button"
+					class="p-2 text-2xl flex align-middle text-white bg-blue-600 rounded-full hover:bg-blue-500 group w-auto">
+					<span>Contact Me</span>
+					<span class="hidden group-hover:flex"> 📞</span>
+				</a> -->
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="relative flex flex-row justify-between min-h-full hero-section">
+			<div class="flex flex-col justify-center" id="typeName">
+				<p class="font-mono text-5xl font-bold text-left relative">
+					<span id="wave-hand" class="animate__animated animate__infinite absolute">👋</span>
+					<span class="ml-20">, I'm</span>
+				</p>
+				<p class="font-mono text-7xl font-bold text-left">Abdelrahman Mahmoud</p>
+				<p class="font-mono text-5xl font-bold text-left">A Full Stack web developer</p>
+			</div>
+			<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem]" id="hero-img">
+				<div class="chat-hi absolute p-3 top-[30%] right-[32%] bg-blue-200 text-slate-600 w-auto text-3xl max-w-[32rem] animate__animated hidden"
+					id="chat-hi">
+				</div>
+			</div>
+		</section>
+
+		<!-- More about -->
+		<section class="more-about h-screen py-12" id="about">
+			<div class="flex flex-col gap-8">
+				<div class="get-to-know flex flex-col gap-4 justify-center items-center">
+					<p class="capitalize text-base font-medium">Get To Know More</p>
+					<p class="capitalize text-5xl font-bold text-blue-700">about me</p>
+				</div>
+				<div class="flex flex-row items-center gap-16">
+					<img src="./assets/images/image 2.jpg" alt="That's me"
+						class="about__image w-96 border border-solid border-gray-100 shadow-md rounded-[2rem]">
+					<div class="about__text">
+						<p class="font-bold text-3xl">I'm Abdelrahman Mahmoud</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, debitis illo unde,
+							doloremque
+							quidem, assumenda fugit reprehenderit nam laborum quibusdam sunt? Numquam temporibus commodi
+							sapiente ipsa neque quae vel dolores?
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience section -->
+		<section class="experience h-screen py-14" id="experience">
+			<div class="flex flex-col gap-8">
+				<div class="experience__title flex flex-col gap-4 justify-center items-center">
+					<p class="capitalize text-base font-medium">Explore My</p>
+					<p class="capitalize text-5xl font-bold text-blue-700">Experience</p>
+				</div>
+				<div class="experience__details__container flex flex-row gap-20">
+					<div class="w-1/2 border border-solid border-gray-500 rounded-2xl py-8 px-16 flex flex-col gap-9">
+						<h2 class="font-bold text-2xl text-slate-500">Frontend Development</h2>
+						<div class="grid grid-flow-dense grid-cols-2 grid-rows-3 gap-8">
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">HTML5</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">CSS3</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">JavaScript</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">Bootstrap</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">Tailwindcss</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">TypeScript</h3>
+									<p class="text-gray-700">Experienced</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="w-1/2 border border-solid border-gray-500 rounded-2xl py-8 px-16 flex flex-col gap-9">
+						<h2 class="font-bold text-2xl text-slate-500">Backend Development</h2>
+						<div class="grid grid-flow-dense grid-cols-2 grid-rows-3 gap-8">
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">.Net Core</h3>
+									<p class="text-gray-700">Intermediate</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">.Net Core MVC</h3>
+									<p class="text-gray-700">Intermediate</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">.Net Core API</h3>
+									<p class="text-gray-700">Intermediate</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">SQL Server</h3>
+									<p class="text-gray-700">Intermediate</p>
+								</div>
+							</article>
+							<article class="flex flex-row gap-4 w-44 justify-start">
+								<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
+								<div>
+									<h3 class="text-xl font-bold">Git</h3>
+									<p class="text-gray-700">Intermediate</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects section -->
+
+		<!-- Contact section -->
+		<section class="contact h-[70vh] justify-center flex-col pt-[4vh]" id="contact">
+			<div class="flex flex-col gap-8">
+				<div class="contact__text flex flex-col gap-4 justify-center items-center">
+					<p class="capitalize text-base font-medium">Get In Touch</p>
+					<p class="capitalize text-5xl font-bold text-blue-700">Contact Me</p>
+				</div>
+
+				<div
+					class="contact__info__container flex justify-center rounded-3xl border border-solid border-gray-700 bg-gray-50 my-8 mx-auto p-2">
+					<a href="#"
+						class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-700 hover:text-white rounded-3xl">
+						<box-icon type='logo' name='gmail'></box-icon>
+						<p>abdelrahman.m1097@email.com</p>
+					</a>
+					<a href="#"
+						class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-700 hover:text-white rounded-3xl">
+						<box-icon name='linkedin' type='logo'></box-icon>
+						<p>abdelrahman1097</p>
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Social accounts - Fixed to the right -->
+
+		<!-- Scroll to top -->
+		<!-- <div
+			class="flex items-center justify-center w-10 h-10 p-2 bg-white rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
+			<svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+				viewBox="0 0 24 24" stroke="currentColor">
+				<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+			</svg>
+		</div> -->
+
+		<!-- Footer section -->
+		<footer class="w-full flex flex-col gap-4 justify-center pb-8 items-center">
+			<nav class="flex flex-row justify-center items-center w-full">
+				<ul class="flex flex-row gap-8">
+					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#about">About</a></li>
+					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl"
+							href="#experience">Experience</a>
+					</li>
+					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#projects">Projects</a>
+					</li>
+					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<p>Copyright © 2023 Abdelrahman M. All Rights Reserved</p>
+		</footer>
+
+	</div>
+
+	<!-- Website scripts -->
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+
+</html>

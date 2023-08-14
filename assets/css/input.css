@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+	visibility: hidden;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+@layer components {
+	.splash {
+		@apply fixed inset-0 z-50 flex items-center justify-center w-screen overflow-hidden h-screen;
+		background: linear-gradient(
+			130deg,
+			rgba(114, 114, 217, 1) 1%,
+			rgba(186, 186, 255, 1) 16%,
+			rgba(231, 231, 255, 1) 29%,
+			rgba(255, 255, 255, 1) 43%
+		);
+	}
+
+	.typing {
+		width: 20ch;
+		-webkit-animation: typing 2s steps(11),
+			blink 0.5s step-end infinite alternate;
+		animation: typing 2s steps(20), blink 0.5s step-end infinite alternate;
+		white-space: nowrap;
+		overflow: hidden;
+		border-right: 3px solid;
+		font-family: monospace;
+	}
+
+	@-webkit-keyframes typing {
+		from {
+			width: 0;
+		}
+	}
+
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+	}
+
+	@-webkit-keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+}
+
+@font-face {
+	font-family: "Mont";
+	src: url("./assets/fonts/Mont-Trial-Bold.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Mont";
+	src: url("./assets/fonts/Mont-Trial-Light.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Mont";
+	src: url("./assets/fonts/Mont-Trial-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Mont";
+	src: url("./assets/fonts/Mont-Trial-SemiBold.ttf") format("ttf");
+}
+
+*,
+body {
+	font-family: "Mont", Helvetica, Arial, Verdana, Tahoma, sans-serif;
+}
+
+body {
+	background: linear-gradient(
+		130deg,
+		rgba(114, 114, 217, 1) 1%,
+		rgba(186, 186, 255, 1) 16%,
+		rgba(231, 231, 255, 1) 29%,
+		rgba(255, 255, 255, 1) 43%
+	);
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.hero-section .hero-img {
+	background-image: url("./../images/image 1.png");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.8;
+}
+
+.chat-hi {
+	/* border-radius: 30% 30% 100% 30% / 50% 50% 0% 50%; */
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	transition: width 1s;
+}
