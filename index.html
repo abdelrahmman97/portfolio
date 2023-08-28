@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AM. | Web Developer </title>
 
-	<link rel="stylesheet" href="./assets/./css/./app.css">
+	<link rel="stylesheet" href="./assets/css/app.css">
 
 	<!-- Favicons -->
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
@@ -36,53 +36,57 @@
 			Loading
 		</div>
 	</div>
+	<div id="top" class="absolute top-0"></div>
 
 	<div id="app" class="p-10 px-32 pb-0">
 
-		<!-- Navbar -->
-		<nav class="container">
-			<div class="block">
-				<div class="flex flex-row items-center justify-between gap-12">
-					<div>
-						<a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
-								class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a>
-					</div>
-					<ul class="flex flex-row gap-16 list-none">
-						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
-								href="#about">about</a>
-						</li>
-						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
-								href="#experience">Experience</a>
-						</li>
-						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
-								href="#projects">projects</a>
-						</li>
-						<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
-								href="#contact">contact</a>
-						</li>
-					</ul>
-				</div>
-				<!-- <a href="contact.html" type="button"
-					class="p-2 text-2xl flex align-middle text-white bg-blue-600 rounded-full hover:bg-blue-500 group w-auto">
-					<span>Contact Me</span>
-					<span class="hidden group-hover:flex"> 📞</span>
-				</a> -->
-			</div>
-		</nav>
-
 		<!-- Hero Section -->
-		<section class="relative flex flex-row justify-between min-h-full hero-section">
-			<div class="flex flex-col justify-center" id="typeName">
-				<p class="font-mono text-5xl font-bold text-left relative">
-					<span id="wave-hand" class="animate__animated animate__infinite absolute">👋</span>
-					<span class="ml-20">, I'm</span>
-				</p>
-				<p class="font-mono text-7xl font-bold text-left">Abdelrahman Mahmoud</p>
-				<p class="font-mono text-5xl font-bold text-left">A Full Stack web developer</p>
-			</div>
-			<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem]" id="hero-img">
-				<div class="chat-hi absolute p-3 top-[30%] right-[32%] bg-blue-200 text-slate-600 w-auto text-3xl max-w-[32rem] animate__animated hidden"
-					id="chat-hi">
+		<section class="">
+			<!-- Navbar -->
+			<nav class="container">
+				<div class="block">
+					<div class="flex flex-row items-center justify-between gap-12">
+						<div>
+							<a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
+									class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a>
+						</div>
+						<ul class="flex flex-row gap-16 list-none">
+							<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+									href="#about">about</a>
+							</li>
+							<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+									href="#experience">Experience</a>
+							</li>
+							<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+									href="#projects">projects</a>
+							</li>
+							<li><a class="text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900"
+									href="#contact">contact</a>
+							</li>
+						</ul>
+					</div>
+					<!-- <a href="contact.html" type="button"
+										class="p-2 text-2xl flex align-middle text-white bg-blue-600 rounded-full hover:bg-blue-500 group w-auto">
+										<span>Contact Me</span>
+										<span class="hidden group-hover:flex"> 📞</span>
+									</a> -->
+				</div>
+			</nav>
+
+			<!-- Hero Section -->
+			<div class="relative flex flex-row justify-between min-h-full hero-section">
+				<div class="flex flex-col justify-center" id="typeName">
+					<p class="font-mono text-5xl font-bold text-left relative">
+						<span id="wave-hand" class="animate__animated animate__infinite absolute">👋</span>
+						<span class="ml-20">, I'm</span>
+					</p>
+					<p class="font-mono text-7xl font-bold text-left">Abdelrahman Mahmoud</p>
+					<p class="font-mono text-5xl font-bold text-left">A Full Stack web developer</p>
+				</div>
+				<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem]" id="hero-img">
+					<div class="chat-hi absolute p-3 top-[30%] right-[32%] bg-blue-200 text-slate-600 w-auto text-3xl max-w-[32rem] animate__animated hidden"
+						id="chat-hi">
+					</div>
 				</div>
 			</div>
 		</section>
@@ -239,13 +243,13 @@
 		<!-- Social accounts - Fixed to the right -->
 
 		<!-- Scroll to top -->
-		<!-- <div
-			class="flex items-center justify-center w-10 h-10 p-2 bg-white rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
-			<svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+		<a href="#top"
+			class="float-right flex items-center justify-center w-16 h-16 p-2 bg-white rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
+			<svg class="w-10 h-10 text-violet-500 rotate-180" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 				viewBox="0 0 24 24" stroke="currentColor">
 				<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 			</svg>
-		</div> -->
+		</a>
 
 		<!-- Footer section -->
 		<footer class="w-full flex flex-col gap-4 justify-center pb-8 items-center">

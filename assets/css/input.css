@@ -5,6 +5,7 @@
 #app {
 	visibility: hidden;
 }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -12,13 +13,11 @@ html {
 @layer components {
 	.splash {
 		@apply fixed inset-0 z-50 flex items-center justify-center w-screen overflow-hidden h-screen;
-		background: linear-gradient(
-			130deg,
-			rgba(114, 114, 217, 1) 1%,
-			rgba(186, 186, 255, 1) 16%,
-			rgba(231, 231, 255, 1) 29%,
-			rgba(255, 255, 255, 1) 43%
-		);
+		background: linear-gradient(130deg,
+				rgba(114, 114, 217, 1) 1%,
+				rgba(186, 186, 255, 1) 16%,
+				rgba(231, 231, 255, 1) 29%,
+				rgba(255, 255, 255, 1) 43%);
 	}
 
 	.typing {
@@ -61,14 +60,17 @@ html {
 	font-family: "Mont";
 	src: url("./assets/fonts/Mont-Trial-Bold.ttf") format("ttf");
 }
+
 @font-face {
 	font-family: "Mont";
 	src: url("./assets/fonts/Mont-Trial-Light.ttf") format("ttf");
 }
+
 @font-face {
 	font-family: "Mont";
 	src: url("./assets/fonts/Mont-Trial-Regular.ttf") format("ttf");
 }
+
 @font-face {
 	font-family: "Mont";
 	src: url("./assets/fonts/Mont-Trial-SemiBold.ttf") format("ttf");
@@ -80,13 +82,11 @@ body {
 }
 
 body {
-	background: linear-gradient(
-		130deg,
-		rgba(114, 114, 217, 1) 1%,
-		rgba(186, 186, 255, 1) 16%,
-		rgba(231, 231, 255, 1) 29%,
-		rgba(255, 255, 255, 1) 43%
-	);
+	background: linear-gradient(130deg,
+			rgba(114, 114, 217, 1) 1%,
+			rgba(186, 186, 255, 1) 16%,
+			rgba(231, 231, 255, 1) 29%,
+			rgba(255, 255, 255, 1) 43%);
 	background-repeat: no-repeat;
 	min-height: 100vh;
 }
@@ -104,4 +104,5 @@ body {
 	border-top-right-radius: 2rem;
 	border-bottom-left-radius: 2rem;
 	transition: width 1s;
+	border: 1px solid rgb(150 190 255 / 50%);
 }
