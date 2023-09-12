@@ -10,7 +10,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     /* Scroll Image */
 
     setTimeout( () => {
-        document.getElementsByClassName( "splash" )[0].classList.add( "animate__fadeOut", "hidden" );
+        document.getElementsByClassName( "splash" )[ 0 ].classList.add( "animate__fadeOut", "hidden" );
         document.getElementById( "app" ).style.visibility = "visible";
 
         sr.reveal( '#typeName', {} );
@@ -41,16 +41,16 @@ document.addEventListener( 'DOMContentLoaded', () => {
                 .delete( 18 )
                 .type( 'my name is Abdelrahman Mahmoud' ).pause( 900 )
                 .delete( 30 )
-                .type( 'you can call me Abdo 😅' ).pause( 900 )
-                .delete( 22 )
-                .type( 'I\'m a Human 👦' ).pause( 900 )
-                .delete( 7 )
-                .type( 'night person 🌃' ).pause( 900 )
-                .delete( 14 )
-                .type( 'problem solver' ).pause( 900 )
-                .delete( 21 )
-                .type( 'and ' ).pause( 900 )
-                .delete( 4 )
+                // .type( 'you can call me Abdo 😅' ).pause( 900 )
+                // .delete( 22 )
+                // .type( 'I\'m a Human 👦' ).pause( 900 )
+                // .delete( 7 )
+                // .type( 'night person 🌃' ).pause( 900 )
+                // .delete( 14 )
+                // .type( 'problem solver' ).pause( 900 )
+                // .delete( 21 )
+                // .type( 'and ' ).pause( 900 )
+                // .delete( 4 )
                 .type( 'A Full Stack web developer  🤩' )
                 .go();
         }, 2000 )
@@ -73,5 +73,29 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
         // // Whenever the user explicitly chooses to respect the OS preference
         // localStorage.removeItem( 'theme' )
-    }, 4000 )
+    }, 4000 );
+
+    // let navElement = document.querySelectorAll( '.nav-item' );
+    // navElement.addEventListener( "mouseenter", function () {
+    //     navElement.classList.add( 'group-hover:visible', 'animate__slideInRight' );
+    // } )
+
+
+    var navElementParent = document.querySelectorAll( '.nav-item' );
+
+    navElementParent.forEach( parent => {
+        const child = parent.querySelector( 'span' );
+
+        parent.addEventListener( 'mouseover', () => {
+            child.classList.add( 'group-hover:visible', 'animate__slideInRight' );
+        } );
+
+        parent.addEventListener( 'mouseout', () => {
+            child.classList.remove( 'group-hover:visible', 'animate__slideInRight' );
+        } );
+    } );
+
+
+
+
 } );
