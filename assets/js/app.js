@@ -7,10 +7,24 @@ document.addEventListener( 'DOMContentLoaded', () => {
         reset: true,
     } );
 
-    /* Scroll Image */
+    new TypeIt( "#Loading", {
+        speed: 200,
+        waitUntilVisible: true,
+        cursorChar: "|",
+        loop: true
+    } )
+        .type( '{' )
+        .type( '<span class="name">...</span>' )
+        .type( '};' )
+        .move( -2, { instance: true } )
+        .delete( ".name" )
+        .type( '<span class="text-blue-600">AM</span>' )
+        .move( 2, { instance: true } )
+        .pause( 1000 )
+        .go();
 
     setTimeout( () => {
-        document.getElementsByClassName( "splash" )[ 0 ].classList.add( "animate__fadeOut", "hidden" );
+        document.getElementsByClassName( "splash" )[0].classList.add( "animate__fadeOut", "hidden" );
         document.getElementById( "app" ).style.visibility = "visible";
 
         sr.reveal( '#typeName', {} );
@@ -27,32 +41,68 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
         setTimeout( () => {
             document.getElementById( "wave-hand" ).classList.add( "animate__wobble" );
-            document.getElementById( "chat-hi" ).classList.remove( "hidden" )
-            new TypeIt( "#chat-hi", {
-                speed: 100,
+            // document.getElementById( "chat-hi" ).classList.remove( "hidden" );
+
+            /* logo */
+            new TypeIt( "#main-logo", {
+                speed: 200,
                 waitUntilVisible: true,
-                afterComplete: function ( instance ) {
-                    instance.destroy();
-                }
+                cursorChar: "|",
+                loop: true
             } )
-                .type( "👋 Hi there" ).pause( 900 )
-                .delete( 10 )
-                .type( "nice to meet you 🤗" ).pause( 900 )
-                .delete( 18 )
-                .type( 'my name is Abdelrahman Mahmoud' ).pause( 900 )
-                .delete( 30 )
-                // .type( 'you can call me Abdo 😅' ).pause( 900 )
-                // .delete( 22 )
-                // .type( 'I\'m a Human 👦' ).pause( 900 )
-                // .delete( 7 )
-                // .type( 'night person 🌃' ).pause( 900 )
-                // .delete( 14 )
-                // .type( 'problem solver' ).pause( 900 )
-                // .delete( 21 )
-                // .type( 'and ' ).pause( 900 )
-                // .delete( 4 )
-                .type( 'A Full Stack web developer  🤩' )
+                .type( '<' )
+                .type( '<span class="name">...</span>' )
+                .type( '>' )
+                .move( -1, { instance: true } )
+                .delete( ".name" )
+                .type( '<span class="">/</span><span class="text-blue-600">AM</span>' )
+                .move( 1, { instance: true } )
+                .pause( 1000 )
                 .go();
+
+            // about me
+            new TypeIt( "#about-me", {
+                speed: 25,
+                waitUntilVisible: true,
+                cursorChar: "|"
+            } )
+                .type( "Hi, I'm Abdelrahman Mahmoud, a full stack web developer from Egypt." )
+                .pause( 500 )
+                .type( "I have a passion for creating dynamic and responsive web applications using .Net technologies." )
+                .pause( 500 )
+                .type( "I enjoy learning new skills and exploring new challenges in the web development field. " )
+                .pause( 500 )
+                .type( " I have worked on various projects, using the latest technologies." )
+                .pause( 500 )
+                .type( " I value quality, efficiency, and collaboration in my work. I'm always eager to learn from others and share my knowledge and experience." )
+                .go();
+
+            // new TypeIt( "#chat-hi", {
+            //     speed: 100,
+            //     waitUntilVisible: true,
+            //     afterComplete: function ( instance ) {
+            //         instance.destroy();
+            //     }
+            // } )
+            //     .type( "👋 Hi there" ).pause( 900 )
+            //     .delete( 10 )
+            //     .type( "nice to meet you 🤗" ).pause( 900 )
+            //     .delete( 18 )
+            //     .type( 'my name is Abdelrahman Mahmoud' ).pause( 900 )
+            //     .delete( 30 )
+            // .type( 'you can call me Abdo 😅' ).pause( 900 )
+            // .delete( 22 )
+            // .type( 'I\'m a Human 👦' ).pause( 900 )
+            // .delete( 7 )
+            // .type( 'night person 🌃' ).pause( 900 )
+            // .delete( 14 )
+            // .type( 'problem solver' ).pause( 900 )
+            // .delete( 21 )
+            // .type( 'and ' ).pause( 900 )
+            // .delete( 4 )
+            // .type( 'A Full Stack web developer  🤩' )
+            // .go();
+
         }, 2000 )
 
 
@@ -73,7 +123,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
         // // Whenever the user explicitly chooses to respect the OS preference
         // localStorage.removeItem( 'theme' )
-    }, 4000 );
+    }, 10 );
 
     // let navElement = document.querySelectorAll( '.nav-item' );
     // navElement.addEventListener( "mouseenter", function () {
@@ -96,6 +146,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
     } );
 
 
+    document.addEventListener( 'mousemove', ( event ) => {
+        const cursorWrapper = document.getElementsByClassName( "cursor-wrapper" )[0];
+        const { clientX, clientY } = event;
+        cursorWrapper.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
+    } );
 
 
 } );

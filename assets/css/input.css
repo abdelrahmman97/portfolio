@@ -10,6 +10,72 @@ html {
 	scroll-behavior: smooth;
 }
 
+*,
+body {
+	font-family: monospace, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+}
+
+body {
+	color: #1f1b1d;
+	background-color: #f3f1e0;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.hero-section .hero-img {
+	background-image: url("./../images/abdo.png");
+	background-size: cover;
+	background-position: center;
+	/* opacity: 0.8; */
+}
+
+.chat-hi {
+	/* border-radius: 30% 30% 100% 30% / 50% 50% 0% 50%; */
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+	transition: width 1s;
+	border: 1px solid rgb(150 190 255 / 50%);
+}
+
+#main-logo .ti-cursor {
+	@apply text-blue-600
+}
+
+
+.cursor-wrapper {
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0%;
+	bottom: auto;
+	left: 0%;
+	right: auto;
+	will-change: transform;
+	transform-style: preserve-3d;
+	transition: transform .5s ease-out;
+}
+
+.cursor {
+	width: 150px;
+	height: 150px;
+	-webkit-filter: blur(50px);
+	filter: blur(50px);
+	background-color: #6765f1;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	margin-top: -100px;
+	margin-left: -100px;
+	display: flex;
+}
+
+.cursor.two {
+	background-color: #FFC107;
+	margin-top: -40px;
+}
+
 @layer components {
 	.splash {
 		@apply fixed inset-0 z-50 flex items-center justify-center w-screen overflow-hidden h-screen;
@@ -54,55 +120,4 @@ html {
 			border-color: transparent;
 		}
 	}
-}
-
-@font-face {
-	font-family: "Mont";
-	src: url("./assets/fonts/Mont-Trial-Bold.ttf") format("ttf");
-}
-
-@font-face {
-	font-family: "Mont";
-	src: url("./assets/fonts/Mont-Trial-Light.ttf") format("ttf");
-}
-
-@font-face {
-	font-family: "Mont";
-	src: url("./assets/fonts/Mont-Trial-Regular.ttf") format("ttf");
-}
-
-@font-face {
-	font-family: "Mont";
-	src: url("./assets/fonts/Mont-Trial-SemiBold.ttf") format("ttf");
-}
-
-*,
-body {
-	font-family: "Mont", Helvetica, Arial, Verdana, Tahoma, sans-serif;
-}
-
-body {
-	background: linear-gradient(130deg,
-			rgba(114, 114, 217, 1) 1%,
-			rgba(186, 186, 255, 1) 16%,
-			rgba(231, 231, 255, 1) 29%,
-			rgba(255, 255, 255, 1) 43%);
-	background-repeat: no-repeat;
-	min-height: 100vh;
-}
-
-.hero-section .hero-img {
-	background-image: url("./../images/image 1.png");
-	background-size: cover;
-	background-position: center;
-	opacity: 0.8;
-}
-
-.chat-hi {
-	/* border-radius: 30% 30% 100% 30% / 50% 50% 0% 50%; */
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
-	border-bottom-left-radius: 2rem;
-	transition: width 1s;
-	border: 1px solid rgb(150 190 255 / 50%);
 }

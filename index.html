@@ -21,21 +21,23 @@
 	<!-- Splash Loading Script -->
 </head>
 
-<body>
+<body class="font-mono">
 
 	<div class="splash animate__animated animate__fadeIn">
 		<div
 			class="inline-flex items-center px-4 py-2 text-sm font-semibold leading-6 transition duration-150 ease-in-out rounded-md animate__animated animate__fadeIn">
-			<svg class="w-5 h-5 mr-3 -ml-1 text-blue-600 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+			<!-- <svg class="w-5 h-5 mr-3 -ml-1 text-blue-600 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
 				viewBox="0 0 24 24">
 				<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 				<path class="opacity-75" fill="currentColor"
 					d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
 				</path>
 			</svg>
-			Loading
+			Loading -->
+			<div id="Loading"></div>
 		</div>
 	</div>
+
 	<div id="top" class="absolute top-0"></div>
 
 	<div id="app" class="">
@@ -48,8 +50,10 @@
 					<div class="block">
 						<div class="flex flex-row items-center justify-between gap-12">
 							<div>
-								<a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
-										class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a>
+								<!-- <a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
+										class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a> -->
+								<a href="index.html" class="flex flex-row font-bold items-baseline text-5xl"
+									id="main-logo"></a>
 							</div>
 							<ul class="flex flex-row gap-16 list-none">
 								<li>
@@ -68,9 +72,9 @@
 								</li>
 								<li>
 									<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
-										href="#projects">
+										href="#Work">
 										<span class="invisible animate__animated">📽️</span>
-										projects
+										work
 									</a>
 								</li>
 								<li>
@@ -82,11 +86,6 @@
 								</li>
 							</ul>
 						</div>
-						<!-- <a href="contact.html" type="button"
-										class="p-2 text-2xl flex align-middle text-white bg-blue-600 rounded-full hover:bg-blue-500 group w-auto">
-										<span>Contact Me</span>
-										<span class="hidden group-hover:flex"> 📞</span>
-									</a> -->
 					</div>
 				</nav>
 
@@ -94,16 +93,20 @@
 				<div class="relative flex flex-row justify-between min-h-full hero-section">
 					<div class="flex flex-col justify-center" id="typeName">
 						<p class="font-mono text-5xl font-bold text-left relative">
-							<span id="wave-hand" class="animate__animated animate__infinite absolute" title="Hi">👋</span>
+							<span id="wave-hand" class="animate__animated animate__infinite absolute"
+								title="Hi">👋</span>
 							<span class="ml-20">, I'm</span>
 						</p>
 						<p class="font-mono text-7xl font-bold text-left">Abdelrahman Mahmoud</p>
-						<p class="font-mono text-5xl font-bold text-left">A Full Stack web developer</p>
+						<p class="font-mono text-5xl font-bold text-left">
+							<span>&lt;<span class="text-blue-600">/</span>&gt;</span> Full Stack web
+							developer
+						</p>
 					</div>
-					<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem]" id="hero-img">
-						<div class="chat-hi absolute p-3 top-[30%] right-[32%] bg-blue-200 text-slate-600 w-auto text-3xl max-w-[32rem] animate__animated hidden"
+					<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem] mt-6" id="hero-img">
+						<!-- <div class="chat-hi absolute p-3 top-[30%] right-[32%] bg-blue-200 text-slate-600 w-auto text-3xl max-w-[32rem] animate__animated hidden"
 							id="chat-hi">
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -112,23 +115,18 @@
 		<!-- More about -->
 		<section class="more-about h-screen py-12" id="about">
 			<div class="px-32 py-0">
-				<div class="flex flex-col gap-8">
-					<div class="get-to-know flex flex-col gap-4 justify-center items-center">
-						<p class="capitalize text-base font-medium">Get To Know More</p>
-						<p class="capitalize text-5xl font-bold text-blue-700">about me</p>
+				<div class="flex flex-col">
+					<div class="get-to-know flex flex-col justify-center items-center mb-4">
+						<p class="capitalize text-5xl font-black">Get To Know More</p>
+						<p class="capitalize text-9xl font-black text-center"><span
+								class="text-blue-600">&lt;/</span>about me<span class="text-blue-600">&gt;</span></p>
 					</div>
-					<div class="flex flex-row items-center gap-16">
-						<img src="./assets/images/image 2.jpg" alt="That's me"
-							class="about__image w-96 border border-solid border-gray-100 shadow-md rounded-[2rem]">
-						<div class="about__text">
-							<p class="font-bold text-3xl">I'm Abdelrahman Mahmoud</p>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, debitis illo unde,
-								doloremque
-								quidem, assumenda fugit reprehenderit nam laborum quibusdam sunt? Numquam temporibus
-								commodi
-								sapiente ipsa neque quae vel dolores?
-							</p>
+					<div class="flex flex-row gap-16">
+						<img src="./assets/images/image_2-removebg.png" alt="That's me"
+							class="about__image w-80 rounded-[2rem] backdrop-blur-md bg-[#ffffff49] border">
+						<div class="about__text flex flex-col pt-20">
+							<!-- <p >I'm Abdelrahman Mahmoud</p> -->
+							<p id="about-me" class="font-bold text-3xl mb-4"></p>
 						</div>
 					</div>
 				</div>
@@ -140,50 +138,51 @@
 			<div class="px-32 py-0">
 				<div class="flex flex-col gap-8">
 					<div class="experience__title flex flex-col gap-4 justify-center items-center">
-						<p class="capitalize text-base font-medium">Explore My</p>
-						<p class="capitalize text-5xl font-bold text-blue-700">Experience</p>
+						<p class="capitalize text-5xl font-black">Explore My</p>
+						<p class="capitalize text-9xl font-black text-center"><span
+								class="text-blue-600">&lt;/</span>Experience<span class="text-blue-600">&gt;</span></p>
 					</div>
 					<div class="experience__details__container flex flex-row gap-20">
 						<div
-							class="w-1/2 border border-solid border-gray-500 rounded-2xl py-8 px-16 flex flex-col gap-9">
+							class="w-1/2 rounded-2xl py-8 px-16 flex flex-col gap-9 backdrop-blur-md bg-[#ffffff49] border">
 							<h2 class="font-bold text-2xl text-slate-500">Frontend Development</h2>
 							<div class="grid grid-flow-dense grid-cols-2 grid-rows-3 gap-8">
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">HTML5</h3>
 										<p class="text-gray-700">Experienced</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">CSS3</h3>
 										<p class="text-gray-700">Experienced</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">JavaScript</h3>
 										<p class="text-gray-700">Experienced</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">Bootstrap</h3>
 										<p class="text-gray-700">Experienced</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">Tailwindcss</h3>
 										<p class="text-gray-700">Experienced</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">TypeScript</h3>
@@ -193,38 +192,38 @@
 							</div>
 						</div>
 						<div
-							class="w-1/2 border border-solid border-gray-500 rounded-2xl py-8 px-16 flex flex-col gap-9">
+							class="w-1/2 rounded-2xl py-8 px-16 flex flex-col gap-9 backdrop-blur-md bg-[#ffffff49] border">
 							<h2 class="font-bold text-2xl text-slate-500">Backend Development</h2>
 							<div class="grid grid-flow-dense grid-cols-2 grid-rows-3 gap-8">
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">.Net Core</h3>
 										<p class="text-gray-700">Intermediate</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">.Net Core MVC</h3>
 										<p class="text-gray-700">Intermediate</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">.Net Core API</h3>
 										<p class="text-gray-700">Intermediate</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">SQL Server</h3>
 										<p class="text-gray-700">Intermediate</p>
 									</div>
 								</article>
-								<article class="flex flex-row gap-4 w-44 justify-start">
+								<article class="flex flex-row gap-4 w-56 justify-start">
 									<box-icon type='solid' name='badge-check' class="h-8 w-8"></box-icon>
 									<div>
 										<h3 class="text-xl font-bold">Git</h3>
@@ -238,29 +237,71 @@
 			</div>
 		</section>
 
-		<!-- Projects section -->
+		<!-- Work section -->
+		<section class="Work h-screen py-12" id="Work">
+			<div class="px-32 py-0">
+				<div class="flex flex-col gap-8">
+					<div class="experience__title flex flex-col gap-4 justify-center items-center">
+						<p class="capitalize text-5xl font-black">Check out some of my latest</p>
+						<p class="capitalize text-9xl font-black text-center"><span
+								class="text-blue-600">&lt;/</span>Work<span class="text-blue-600">&gt;</span></p>
+					</div>
+					<div class="experience__details__container flex flex-row gap-20">
+
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Contact section -->
 		<section class="contact h-[70vh] justify-center flex-col pt-[4vh]" id="contact">
 			<div class="px-32 py-0">
 				<div class="flex flex-col gap-8">
-					<div class="contact__text flex flex-col gap-4 justify-center items-center">
-						<p class="capitalize text-base font-medium">Get In Touch</p>
-						<p class="capitalize text-5xl font-bold text-blue-700">Contact Me</p>
+					<div class="contact__text flex flex-col gap-4 justify-center items-center text-center">
+						<p class="capitalize text-9xl font-black text-center"><span
+								class="text-blue-600">&lt;/</span>Let<span class="text-blue-600">’</span>s Talk<span
+								class="text-blue-600">&gt;</span></p>
+						<p class="text-2xl font-normal">Want to Start a Project? <br>Don't be shy to
+							contact me for collaboration at</p>
 					</div>
 
 					<div
-						class="contact__info__container flex justify-center rounded-3xl border border-solid border-gray-700 bg-gray-50 my-8 mx-auto p-2">
+						class="contact__info__container flex justify-center rounded-3xl backdrop-blur-md bg-[#ffffff49] border my-8 mx-auto p-2">
 						<a href="#"
-							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-700 hover:text-white rounded-3xl">
-							<box-icon type='logo' name='gmail'></box-icon>
-							<p>abdelrahman.m1097@email.com</p>
+							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
+							<box-icon type="logo" name="gmail"></box-icon>
+							<p>abdelrahman.m1097@gmail.com</p>
 						</a>
 						<a href="#"
-							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-700 hover:text-white rounded-3xl">
-							<box-icon name='linkedin' type='logo'></box-icon>
-							<p>abdelrahman1097</p>
+							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
+							<box-icon name="whatsapp" type="logo"></box-icon>
+							<p>+20 0101 7343 667</p>
 						</a>
+					</div>
+
+					<div class="flex flex-col gap-4 justify-center items-center">
+						<p class="text-3xl font-black">Follow me 👇</p>
+						<div class="flex justify-center gap-4 mx-auto">
+							<a href="#"
+								class="flex items-center justify-center border rounded-2xl bg-blue-300 hover:bg-blue-600 text-blue-600 hover:text-white border-blue-600 hover:border-transparent backdrop-blur-md bg-[#ffffff49] px-4 py-2">
+								<svg xmlns="http://www.w3.org/2000/svg" class="w-10" viewBox="0 0 24 24"
+									fill="currentColor">
+									<circle cx="4.983" cy="5.009" r="2.188"></circle>
+									<path
+										d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z">
+									</path>
+								</svg>
+							</a>
+							<a href="#"
+								class="flex items-center justify-center border rounded-2xl bg-blue-300 hover:bg-blue-600 text-blue-600 hover:text-white border-blue-600 hover:border-transparent backdrop-blur-md bg-[#ffffff49] px-4 py-2">
+								<svg xmlns="http://www.w3.org/2000/svg" class="w-10" viewBox="0 0 24 24"
+									fill="currentColor">
+									<path
+										d="M17.47 6.07a4.54 4.54 0 0 0-4.38 3.69 19.9 19.9 0 0 1-2.28-4.9H8.55v6a2.14 2.14 0 1 1-4.28 0v-6L2 4.91v6a4.4 4.4 0 1 0 8.8-.05v-1a20.55 20.55 0 0 0 1.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 0 0 3.11.89 4.57 4.57 0 0 0 0-9.14zm0 6.83a4.09 4.09 0 0 1-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 0 1 2.27 2.24 2.41 2.41 0 0 1-2.27 2.32z">
+									</path>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -272,8 +313,8 @@
 		<!-- Scroll to top -->
 		<div class="px-32 py-0">
 			<a href="#top"
-				class="float-right flex items-center justify-center w-16 h-16 p-2 bg-white rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
-				<svg class="w-10 h-10 text-violet-500 rotate-180" fill="none" stroke-linecap="round"
+				class="float-right flex items-center justify-center w-16 h-16 p-2 backdrop-blur-md bg-[#ffffff49] border rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
+				<svg class="w-10 h-10 text-blue-600 rotate-180" fill="none" stroke-linecap="round"
 					stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
 					<path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
 				</svg>
@@ -284,19 +325,24 @@
 		<footer class="w-full flex flex-col gap-4 justify-center pb-8 items-center">
 			<nav class="flex flex-row justify-center items-center w-full">
 				<ul class="flex flex-row gap-8">
-					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#about">About</a></li>
-					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl"
-							href="#experience">Experience</a>
+					<li><a class="hover:text-blue-700 font-semibold text-xl" href="#about">About</a></li>
+					<li><a class="hover:text-blue-700 font-semibold text-xl" href="#experience">Experience</a>
 					</li>
-					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#projects">Projects</a>
+					<li><a class="hover:text-blue-700 font-semibold text-xl" href="#work">Work</a>
 					</li>
-					<li><a class="text-gray-500 hover:text-blue-700 font-semibold text-xl" href="#contact">Contact</a>
+					<li><a class="hover:text-blue-700 font-semibold text-xl" href="#contact">Contact</a>
 					</li>
 				</ul>
 			</nav>
-			<p>Copyright © 2023 Abdelrahman M. All Rights Reserved</p>
+			<p>Copyright © 2023 <span class="text-blue-600">&lt;/</span>Abdelrahman M.<span
+					class="text-blue-600">&gt;</span> All Rights Reserved</p>
 		</footer>
 
+	</div>
+
+	<div class="cursor-wrapper">
+		<div class="cursor"></div>
+		<div class="cursor two"></div>
 	</div>
 
 	<!-- Website scripts -->
