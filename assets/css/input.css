@@ -3,121 +3,138 @@
 @tailwind utilities;
 
 #app {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 *,
 body {
-	font-family: monospace, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-family: monospace, Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 
 body {
-	color: #1f1b1d;
-	background-color: #f3f1e0;
-	background-repeat: no-repeat;
-	min-height: 100vh;
+  color: #1f1b1d;
+  background-color: #f3f1e0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .hero-section .hero-img {
-	background-image: url("./../images/abdo.png");
-	background-size: cover;
-	background-position: center;
-	/* opacity: 0.8; */
+  background-image: url("./../images/abdo.png");
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.8; */
 }
 
 .chat-hi {
-	/* border-radius: 30% 30% 100% 30% / 50% 50% 0% 50%; */
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
-	border-bottom-left-radius: 2rem;
-	transition: width 1s;
-	border: 1px solid rgb(150 190 255 / 50%);
+  /* border-radius: 30% 30% 100% 30% / 50% 50% 0% 50%; */
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  transition: width 1s;
+  border: 1px solid rgb(150 190 255 / 50%);
 }
 
 #main-logo .ti-cursor {
-	@apply text-blue-600
+  @apply text-blue-600;
 }
 
-
 .cursor-wrapper {
-	z-index: -1;
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0%;
-	bottom: auto;
-	left: 0%;
-	right: auto;
-	will-change: transform;
-	transform-style: preserve-3d;
-	transition: transform .5s ease-out;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out;
 }
 
 .cursor {
-	width: 150px;
-	height: 150px;
-	-webkit-filter: blur(50px);
-	filter: blur(50px);
-	background-color: #6765f1;
-	border-radius: 50%;
-	justify-content: center;
-	align-items: center;
-	margin-top: -100px;
-	margin-left: -100px;
-	display: flex;
+  width: 150px;
+  height: 150px;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-color: #6765f1;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+  margin-left: -100px;
+  display: flex;
 }
 
 .cursor.two {
-	background-color: #FFC107;
-	margin-top: -40px;
+  background-color: #ffc107;
+  margin-top: -40px;
+}
+
+.circle-animate {
+  animation-name: move-in-circle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-in-circle {
+  0% {
+    transform: rotate(0deg) translateX(20px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(20px) rotate(-360deg);
+  }
 }
 
 @layer components {
-	.splash {
-		@apply fixed inset-0 z-50 flex items-center justify-center w-screen overflow-hidden h-screen;
-		background: linear-gradient(130deg,
-				rgba(114, 114, 217, 1) 1%,
-				rgba(186, 186, 255, 1) 16%,
-				rgba(231, 231, 255, 1) 29%,
-				rgba(255, 255, 255, 1) 43%);
-	}
+  .splash {
+    @apply fixed inset-0 z-50 flex items-center justify-center w-screen overflow-hidden h-screen;
+    background: linear-gradient(
+      130deg,
+      rgba(114, 114, 217, 1) 1%,
+      rgba(186, 186, 255, 1) 16%,
+      rgba(231, 231, 255, 1) 29%,
+      rgba(255, 255, 255, 1) 43%
+    );
+  }
 
-	.typing {
-		width: 20ch;
-		-webkit-animation: typing 2s steps(11),
-			blink 0.5s step-end infinite alternate;
-		animation: typing 2s steps(20), blink 0.5s step-end infinite alternate;
-		white-space: nowrap;
-		overflow: hidden;
-		border-right: 3px solid;
-		font-family: monospace;
-	}
+  .typing {
+    width: 20ch;
+    -webkit-animation: typing 2s steps(11),
+      blink 0.5s step-end infinite alternate;
+    animation: typing 2s steps(20), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+  }
 
-	@-webkit-keyframes typing {
-		from {
-			width: 0;
-		}
-	}
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+  }
 
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-	}
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
 
-	@-webkit-keyframes blink {
-		50% {
-			border-color: transparent;
-		}
-	}
+  @-webkit-keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
-	@keyframes blink {
-		50% {
-			border-color: transparent;
-		}
-	}
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
