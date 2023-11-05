@@ -18,11 +18,15 @@
 	<!-- Animate CSS CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-	<!-- Splash Loading Script -->
+	<!-- AlpineJs CDN -->
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
 </head>
 
 <body class="font-mono">
 
+	<!-- Splash Loading Script -->
 	<div class="splash animate__animated animate__fadeIn">
 		<div
 			class="inline-flex items-center px-4 py-2 text-sm font-semibold leading-6 transition duration-150 ease-in-out rounded-md animate__animated animate__fadeIn">
@@ -43,64 +47,63 @@
 	<div id="app" class="">
 
 		<!-- Hero Section -->
-		<section class="hero-section h-screen">
+		<section class="h-screen hero-section">
 			<div class="p-10 px-32 pb-0">
 				<!-- Navbar -->
-				<nav class="container">
-					<div class="block">
-						<div class="flex flex-row items-center justify-between gap-12">
-							<div>
-								<!-- <a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
+				<nav class="">
+					<div class="flex flex-row items-center justify-between gap-12">
+						<div>
+							<!-- <a href="index.html" class="flex flex-row items-baseline text-7xl font-black">AM<span
 										class="w-4 h-4 p-2 bg-blue-600 rounded-full"></span></a> -->
-								<a href="index.html" class="flex flex-row font-bold items-baseline text-5xl"
-									id="main-logo"></a>
-							</div>
-							<ul class="flex flex-row gap-16 list-none">
-								<li>
-									<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
-										href="#about">
-										<span class="invisible animate__animated">🧑🏻</span>
-										about
-									</a>
-								</li>
-								<li>
-									<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
-										href="#experience">
-										<span class="invisible animate__animated">✨</span>
-										Experience
-									</a>
-								</li>
-								<li>
-									<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
-										href="#Work">
-										<span class="invisible animate__animated">📽️</span>
-										work
-									</a>
-								</li>
-								<li>
-									<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
-										href="#contact">
-										<span class="invisible animate__animated">📞</span>
-										contact
-									</a>
-								</li>
-							</ul>
+							<a href="index.html" class="flex flex-row font-bold items-baseline text-5xl"
+								id="main-logo"></a>
 						</div>
+						<ul class="flex flex-row gap-16 list-none">
+							<li>
+								<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
+									href="#about">
+									<span class="invisible animate__animated">🧑🏻</span>
+									about
+								</a>
+							</li>
+							<li>
+								<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
+									href="#experience">
+									<span class="invisible animate__animated">✨</span>
+									Experience
+								</a>
+							</li>
+							<li>
+								<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
+									href="#Work">
+									<span class="invisible animate__animated">📽️</span>
+									work
+								</a>
+							</li>
+							<li>
+								<a class="nav-item text-2xl font-semibold capitalize text-slate-600 hover:text-blue-900 flex items-center gap-2 group"
+									href="#contact">
+									<span class="invisible animate__animated">📞</span>
+									contact
+								</a>
+							</li>
+						</ul>
 					</div>
 				</nav>
 
 				<!-- Hero Section -->
 				<div class="relative flex flex-row justify-between min-h-full hero-section">
-					<div class="flex flex-col justify-center" id="typeName">
+					<div class="flex flex-col justify-center gap-8" id="typeName">
 						<p class="font-mono text-5xl font-bold text-left relative">
 							<span id="wave-hand" class="animate__animated animate__infinite absolute"
 								title="Hi">👋</span>
 							<span class="ml-20">, I'm</span>
 						</p>
-						<p class="font-mono text-7xl font-bold text-left">Abdelrahman Mahmoud</p>
+						<p class="font-mono text-7xl font-bold text-left" x-data="{ message: $store.user.fullName  }"
+							x-text="message"></p>
 						<p class="font-mono text-5xl font-bold text-left">
-							<span>&lt;<span class="text-blue-600">/</span>&gt;</span> Full Stack web
-							developer
+							<span>&lt;<span class="text-blue-600">/</span>&gt;</span>
+							<span x-data="{ message: $store.user.title }" x-text="message"></span>
 						</p>
 					</div>
 					<div class="hero-img max-w-[32rem] w-[32rem] h-[44rem] mt-6" id="hero-img">
@@ -113,7 +116,7 @@
 		</section>
 
 		<!-- More about -->
-		<section class="more-about h-screen py-12" id="about">
+		<section class="h-screen py-12 more-about" id="about">
 			<div class="px-32 py-0">
 				<div class="flex flex-col">
 					<div class="get-to-know flex flex-col justify-center items-center mb-4">
@@ -134,7 +137,7 @@
 		</section>
 
 		<!-- Experience section -->
-		<section class="experience h-screen py-14" id="experience">
+		<section class="h-screen py-14 experience" id="experience">
 			<div class="px-32 py-0">
 				<div class="flex flex-col gap-8">
 					<div class="experience__title flex flex-col gap-4 justify-center items-center">
@@ -238,7 +241,7 @@
 		</section>
 
 		<!-- Work section -->
-		<section class="Work h-screen py-12" id="Work">
+		<section class="h-screen py-12 Work" id="Work">
 			<div class="px-32 py-0">
 				<div class="flex flex-col gap-8">
 					<div class="experience__title flex flex-col gap-4 justify-center items-center">
@@ -246,7 +249,27 @@
 						<p class="capitalize text-9xl font-black text-center"><span
 								class="text-blue-600">&lt;/</span>Work<span class="text-blue-600">&gt;</span></p>
 					</div>
-					<div class="experience__details__container flex flex-row gap-20">
+					<div class="experience__details__container flex gap-20" x-data="{ proj: $store.projects.projects }">
+
+						<template x-for="item in proj">
+							<div class="p-4 flex-1 rounded-3xl text-center backdrop-blur-md bg-[#ffffff49] border">
+								<div class="flex flex-wrap flex-row gap-9 justify-around">
+									<img class="rounded-3xl w-11/12 h-11/12" x-bind:src="item.image"
+										x-bind:alt="item.name" x-bind:title="item.name">
+								</div>
+								<h2 class="m-4 text-gray-900 text-xl font-bold" x-text="item.name"></h2>
+								<div class="flex justify-center gap-4">
+									<a x-bind:href="item.github"
+										class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
+										GitHub
+									</a>
+									<a x-bind:href="item.live"
+										class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
+										Live Demo
+									</a>
+								</div>
+							</div>
+						</template>
 
 					</div>
 				</div>
@@ -254,7 +277,7 @@
 		</section>
 
 		<!-- Contact section -->
-		<section class="contact h-[70vh] justify-center flex-col pt-[4vh]" id="contact">
+		<section class="h-[80vh] justify-center flex-col pt-[4vh] contact" id="contact">
 			<div class="px-32 py-0">
 				<div class="flex flex-col gap-8">
 					<div class="contact__text flex flex-col gap-4 justify-center items-center text-center">
@@ -270,12 +293,12 @@
 						<a href="#"
 							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
 							<box-icon type="logo" name="gmail"></box-icon>
-							<p>abdelrahman.m1097@gmail.com</p>
+							<p  x-data="{ message: $store.user.gmail }" x-text="message"></p>
 						</a>
 						<a href="#"
 							class="flex flex-row items-center gap-2 m-4 p-3 hover:bg-blue-500 hover:text-white rounded-3xl">
 							<box-icon name="whatsapp" type="logo"></box-icon>
-							<p>+20 0101 7343 667</p>
+							<p x-data="{ message: $store.user.phone }" x-text="message"></p>
 						</a>
 					</div>
 
@@ -311,7 +334,7 @@
 		<!-- Social accounts - Fixed to the right -->
 
 		<!-- Scroll to top -->
-		<div class="px-32 py-0">
+		<div class="px-32 py-0 right-0 bottom-8 fixed hidden" id="up">
 			<a href="#top"
 				class="float-right flex items-center justify-center w-16 h-16 p-2 backdrop-blur-md bg-[#ffffff49] border rounded-full shadow-lg hover:animate-bounce dark:bg-slate-800 ring-1 ring-slate-900/5 dark:ring-slate-200/20">
 				<svg class="w-10 h-10 text-blue-600 rotate-180" fill="none" stroke-linecap="round"
@@ -334,7 +357,7 @@
 					</li>
 				</ul>
 			</nav>
-			<p>Copyright © 2023 <span class="text-blue-600">&lt;/</span>Abdelrahman M.<span
+			<p>Copyright © 2023 <span class="text-blue-600">&lt;/</span><span x-data="{ message: $store.user.shortName }" x-text="message"></span><span
 					class="text-blue-600">&gt;</span> All Rights Reserved</p>
 		</footer>
 
