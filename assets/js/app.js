@@ -149,7 +149,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     let scrollToTop = document.getElementById( "up" );
 
     window.onscroll = function () {
-        console.log( document.documentElement.scrollTop );
         if (
             document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
         ) {
@@ -167,41 +166,3 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 
 } );
-
-document.addEventListener( 'alpine:init', () => {
-    Alpine.store( 'user', {
-        fullName: "Abdelrahman Mahmoud",
-        shortName: "Abdelrahman M.",
-        title: "Full Stack web developer",
-        gmail: "abdelrahman.m1097@gmail.com",
-        phone: "+20 0101 7343 667",
-        linkedin: "",
-        upwork: ""
-
-    } );
-
-    Alpine.store( 'projects', {
-        projects: [
-            {
-                name: "Project One",
-                image: "https://thriving-dragon-a3fcd9.netlify.app/assets/project-1.png",
-                github: "https://thriving-dragon-a3fcd9.netlify.app/",
-                live: "https://thriving-dragon-a3fcd9.netlify.app/"
-            },
-            {
-                name: "Project Two",
-                github: "https://thriving-dragon-a3fcd9.netlify.app/",
-                live: "https://thriving-dragon-a3fcd9.netlify.app/",
-                image: "https://thriving-dragon-a3fcd9.netlify.app/assets/project-2.png"
-            },
-            {
-                name: "Project Three",
-                github: "https://thriving-dragon-a3fcd9.netlify.app/",
-                live: "https://thriving-dragon-a3fcd9.netlify.app/",
-                image: "https://thriving-dragon-a3fcd9.netlify.app/assets/project-3.png"
-            },
-        ]
-    } );
-
-
-} )

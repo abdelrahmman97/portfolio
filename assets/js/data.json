@@ -1,0 +1,31 @@
+{
+    "user":{
+    },
+    "projects": [
+        {
+            "name": "Cinema Plus (Movie App)",
+            "description": "A Cinema Plus is a movie application project on JavaScript HTML and CSS. This is a project I created for the ITI - Intensive Code Camp (ICC) program Scholarship. It is a web app that allows users to browse, search, bookmark and movies, series and TV shows. I used only CSS3, HTML5 and JavaScript to build this app, without any frameworks or libraries. The app uses the TMDB API to fetch and display movies, series and TV shows.",
+            "live": "https://cinemaplus-movieapp.netlify.app/",
+            "github": "https://github.com/abdelrahmman97/Movie-App",
+            "images": [
+                "./assets/images/movie app/ma 1.jpeg",
+                "./assets/images/movie app/ma 2.jpeg",
+                "./assets/images/movie app/ma 3.jpeg",
+                "./assets/images/movie app/ma 4.jpeg",
+                "./assets/images/movie app/ma 5.jpeg",
+                "./assets/images/movie app/ma 6.jpeg",
+                "./assets/images/movie app/ma 7.jpeg",
+                "./assets/images/movie app/ma 8.jpeg"
+            ]
+        },
+        {
+            "name": "Landing Page",
+            "description": "I was asked to create a landing page, I was given a template as a Figma file and I converted it to html and css",
+            "live": "./data/Landing Page/index.html",
+            "github": "",
+            "images": [
+                ""
+            ]
+        }
+    ]
+}
